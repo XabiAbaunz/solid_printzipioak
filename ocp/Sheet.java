@@ -1,5 +1,6 @@
 package ocp;
 
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -17,5 +18,16 @@ public class Sheet{
 			f=efigures.nextElement();
 			f.draw();
 		}
+	}
+	
+	public ArrayList<Float> getArea() {
+		ArrayList<Float> azalerak = new ArrayList<>();
+		Enumeration<Figure> efigures=figures.elements();
+		Figure f;
+		while (efigures.hasMoreElements()){
+			f=efigures.nextElement();
+			azalerak.add(f.getArea());
+		}
+		return azalerak;
 	}
 }

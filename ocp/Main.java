@@ -6,14 +6,16 @@ public class Main {
 		
 		Sheet sheet = new Sheet();
 		
-		sheet.addFigure(new Circle());
-		sheet.addFigure(new Circle());
+		sheet.addFigure(new Circle(2));
+		sheet.addFigure(new Circle(3));
 		
-		sheet.addFigure(new Square());
+		sheet.addFigure(new Square(3));
 		
-		sheet.addFigure(new Diamond());
+		sheet.addFigure(new Diamond(2,3));
 
 		sheet.drawFigures();
+		
+		System.out.println(sheet.getArea());
 	}
 
 }
